@@ -1,0 +1,4 @@
+[*.cs]
+
+# IDE0027: Use expression body for accessor
+csharp_style_expression_bodied_accessors = false
