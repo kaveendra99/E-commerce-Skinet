@@ -90,7 +90,7 @@ public class ProductsController(IGenericRepository<Product> repo) : BaseApiContr
     public async Task<ActionResult<IReadOnlyList<string>>> GetTypes()
     {
         var spec = new TypeListSpecification();
-       return Ok(await repo.ListAllAsync());
+        return Ok(await repo.ListAsync(spec));
     }
 
     private bool ProductExists(int id)
