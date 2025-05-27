@@ -1,0 +1,19 @@
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block; /* Or flex if needed */
+    will-change: transform;
+    overflow: hidden;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+  
+  .product-card img,
+  .product-card mat-card-content,
+  .product-card mat-card-actions {
+    transition: none !important;
+  }
+  
