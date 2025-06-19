@@ -1,10 +1,6 @@
-using System;
 using Core.Entities;
 using Core.Interfaces;
-using Infrastructure.Services;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace API.Controllers;
 

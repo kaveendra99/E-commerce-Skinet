@@ -1,17 +1,23 @@
 using System;
 using Core.Entities;
 using Infrastructure.Config;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Data;
 
-public class StoreContext(DbContextOptions options) : DbContext(options)
+public class StoreContext : IdentityDbContext<AppUser>
 {
-    public DbSet<Product> Products { get; set; }
+    public StoreContext(DbContextOptions<StoreContext> options) : base(options)
+    {
+    }
 
+    public DbSet<Product> Products { get; set; }
+    
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
+
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(ProductConfiguration).Assembly);
     }
 }

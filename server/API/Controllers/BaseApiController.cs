@@ -1,5 +1,3 @@
-using System;
-using System.Runtime.CompilerServices;
 using API.RequestHelpers;
 using Core.Entities;
 using Core.Interfaces;
@@ -7,8 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
 
-[ApiController]
 [Route("api/[controller]")]
+[ApiController]
 
 public class BaseApiController : ControllerBase
 {
